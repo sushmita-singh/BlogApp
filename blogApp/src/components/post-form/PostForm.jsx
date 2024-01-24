@@ -100,7 +100,7 @@ function PostForm({post}) {
         type='file'
         className='mb-4'
         accept='image/png, image/jpg, image/jpeg'
-        {...register('image'), {required: !post}} 
+        {...register('image', {required: !post})} 
         // If the post is there, we don't want is hence required: !post      
         />
         {post && (
@@ -115,11 +115,11 @@ function PostForm({post}) {
         options={['active', 'inactive']}
         label='Status'
         className='mb-4'
-        {...register('status'), {required: true}}
+        {...register('status', {required: true})}
         />
         <Button
         type='submit'
-        bgColor={post ? 'bg-green-500' : undefined}
+        bgColor={post ? 'bg-green-500' : 'bg-gray-700'}
         className='w-full'
         >
           {post ? 'Update':'Submit'}

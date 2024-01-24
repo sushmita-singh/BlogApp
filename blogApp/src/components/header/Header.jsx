@@ -1,6 +1,6 @@
 import React from 'react'
-import {Container} from '../container/Container'
-import {Logo} from '../Logo'
+import Container from '../container/Container'
+import Logo from "../Logo"
 import {Link} from 'react-router-dom'
 import LogoutBtn from './LogoutBtn'
 import { useNavigate } from 'react-router-dom'
@@ -44,7 +44,7 @@ function Header() {
             <nav className='flex'>
                 <div className='mr-4'>
                     <Link to='/'>
-                        <Logo />
+                        <Logo width='30%'/>
                     </Link>
                 </div>
                 <ul className='flex ml-auto'>
