@@ -13,7 +13,9 @@ function EditPost() {
   useEffect(() => {
     if (slug) {
       appwriteService.getPost(slug).then((post) => {
+        console.log('inside update post', post)
         if (post) {
+          console.log('post found')
           setPost(post)
         }else {
           navigate("/")
